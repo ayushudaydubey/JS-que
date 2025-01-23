@@ -405,5 +405,446 @@ else{
   console.log("Not divisible"); 
 }  
 
+
+
+let num =5;
+if (num <= 100 && num > 80) {
+  console.log("Student Grade is A+ ");
+
+
+}
+else if (num < 80 && num >= 70) {
+  console.log("Student Grade is A ");
+
+}
+
+else if (num < 70 && num >= 60) {
+  console.log("Student Grade is B ");
+
+}
+
+else if (num < 60 && num >= 50) {
+  console.log("Student Grade is C ");
+
+}
+else if (num < 50 && num >= 40) {
+  console.log("Student Grade is D ");
+
+}
+else if (num < 40 && num >= 33) {
+  console.log("Student Grade is E ");
+
+}
+else{
+  console.log("Fail");
+  
+}
+
+let str1 ="Ayush";
+let str2 ="Ayush";
+if(str1 === str2){
+  console.log("Both string are equal's");
+  
+}
+else{
+  console.log("srings are not equal;s");
+  
+}
+
+
+let num = 5;
+console.log(num % 2 == 0 ? "even" : "odd");
+
+
+
+let firstNum =40;
+let secNum  =50;
+let thirdNum =60;
+if (firstNum >secNum && firstNum >thirdNum) {
+  console.log("First Number is gerater ");
+  
+}
+else if (secNum > firstNum && secNum >thirdNum){
+  console.log("Second Number is greater ");
+  
+}
+else if (thirdNum > firstNum && thirdNum >secNum){
+  console.log("Third  Number is greater ");
+  
+}
+else{
+  console.log("all Number are equal's");
+  
+}
+
+
+let price = 1000;
+let discount = 0;
+
+if (price < 1000) {
+  discount = price * 0.90;
+  console.log("Discounted price:", discount);
+} else if (price >= 1000 && price <= 2000) {
+  discount = price * 0.85; 
+  console.log("Discounted price:", discount);
+} else {
+  discount = price * 0.80;
+  console.log("Discounted price:", discount);
+}
+
 */
 
+/* 7. Object Basics (10 Questions) 
+
+let obj = {
+  name:"Ayush Dubey",
+  age :23,
+  city:" Panna"
+}
+console.log(obj);
+
+ 
+
+obj.isStudent =true;
+
+console.log(obj);
+
+console.log(obj["city"]);
+
+delete obj.age;
+console.log(obj);
+
+
+
+function logKeys(obj) {
+  let keys = Object.keys(obj);
+  keys.forEach(key=>{
+    console.log(key);
+    
+  })
+  
+}
+logKeys({
+  name:"Ayush",
+  age:23,
+  city:"Panna"
+});
+
+
+let bookArr = [{
+  title: "mylife",
+  author: "sam"
+}, {
+  title: "yourlife",
+  author: "ayush"
+},
+{
+  title: "ourlife",
+  author: "kabir"
+}
+];
+console.log(bookArr);
+
+console.log(bookArr[1]);
+
+console.log(bookArr.includes("price"));
+
+function countkey(obj) {
+  return Object.keys(obj).length;
+
+}
+const myObj = {
+  name: "ayush",
+  age: 23,
+  city: "panna"
+}
+console.log(countkey(myObj));
+
+
+//merge object 
+
+let obj1 = {
+  name: "ayush",
+  age: 23,
+  city: "panna"
+};
+
+let obj2 = {
+  name: "uday",
+  age: 22,
+  city: "bhopal"
+};
+
+let result = Object.assign({}, obj1);
+console.log(result);
+console.log(obj1);
+console.log(obj2);
+
+*/
+
+
+/* 8. String Manipulation (10 Questions)
+
+let str = "Hello Javascript";
+console.log(str.length);
+
+
+let last4Char = str.slice(-4);
+console.log(last4Char);
+
+let lowerCase = str.toLocaleLowerCase();
+console.log(lowerCase);
+
+
+let sentence = "Learning JavaScript is fun and exciting!";
+let  words = sentence.split(" ");
+console.log(words);
+
+let position  = sentence.indexOf("a");
+console.log(position);
+
+let myStr = "I love JavaScript";
+let replaceStr = myStr.replace("JavaScript", "JS"); 
+console.log(replaceStr);
+
+let repeatstr = myStr.repeat(3);
+console.log(repeatstr);
+
+
+function containWords(str ,words) {
+  return str.includes(words); 
+}
+ 
+let result1 = containWords("How are you","are")
+console.log(result1);
+
+
+
+let str = " play with javascripts    ";
+let removeSpace = str.trim();
+
+console.log(removeSpace);
+
+
+
+function countVowels(str) {
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let result = countVowels("Hello World");
+console.log(result); 
+
+
+*/
+
+/* Mixed Practice (20 Questions) 
+
+function returnEvenNum(arr) {
+  return arr.filter(num => num %2 ===0)
+}
+let myarr =[10,15,11,9,7,6];
+let result =  returnEvenNum(myarr)
+console.log(result);
+
+
+
+function occurrencesValue(arr ,value) {
+  let count =0;
+  for (let i = 0; i < arr.length; i++) {
+  if (arr[i]===value) {
+    count++;
+  }  
+  }
+  return count;
+}
+let number =[10,20,30,10,5];
+let toCount =10;
+console.log(occurrencesValue(number,toCount) );
+
+
+
+function palindromic(str) {
+  let cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  let strreverse = cleanStr.split("").reverse().join("");
+  return cleanStr === strreverse;
+}
+
+let name ="madam";
+console.log(palindromic(name));
+
+
+
+function printPattern(rows) {
+  for (let i = 0; i <=rows; i++) {
+  console.log("*".repeat(i));  
+  }
+}
+printPattern(5);
+
+
+function arrSeq(arr) {
+  return arr.map(num => num*num)
+  
+}
+let number = [1,2,3];
+console.log(arrSeq(number));
+
+
+
+
+  let oddSum = 0;
+for (let i = 1; i <=50; i++) {
+
+  if(i % 2!==0){
+    oddSum += i;
+  }
+  
+}
+console.log(oddSum);
+
+
+
+let obj ={
+  name:"Ayush",
+  surname:"dubey"
+}
+function fullName(first ,second) {
+  console.log(obj.name +" "+obj.surname);
+ 
+}
+fullName();
+
+
+let str ="10";
+let num = Number(str);
+let result = num+5;
+console.log(result);
+
+
+
+let arr =[2,3,4,5,6];
+let reverseArr = [];
+for (let i = arr.length-1; i >=0; i--) {
+
+ reverseArr.push(arr[i]);
+  
+}
+console.log(reverseArr);
+
+
+function emptyArr(arr) {
+if(arr.length == 0){
+  console.log("array is empty");
+  
+}
+else{
+  console.log("array not empty");
+  
+}
+  
+}
+let brr =[5];
+emptyArr(brr);
+
+
+const today = new Date();
+const day = String(today.getDate()).padStart(2,"0");
+const month = String(today.getMonth() + 1).padStart(2, "0");
+
+const year = today.getFullYear();
+
+console.log(`Current Date : ${day}/${month}/${year}`);
+
+
+
+function findSmallest(arr) {
+//   return Math.min(...arr)
+// }
+// let numbers =[10,20,2,6,8];
+// console.log(findSmallest(numbers));
+
+// Without Methods 
+
+let smallest  = arr[0];
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] < smallest) {
+    smallest = arr[i];
+  }
+  
+}
+return smallest;
+}
+
+let arry = [10,5,50,90,75];
+console.log(findSmallest(arry));
+
+
+
+
+function genrateFibonachi(n) {
+  if(n <= 0) return [];
+  if(n===0) return [0];
+
+  let fibonachi = [0,1]
+
+  for (let i = 2; i < n; i++) {
+    fibonachi.push(fibonachi[i-1]+fibonachi[i-2]);
+    
+  }
+return fibonachi;
+
+
+
+}
+console.log(genrateFibonachi(5));
+
+
+
+function findIdxFirstVow(str) {
+  let vowels = "aeiouAEIOU"; 
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) { 
+      return i; 
+    }
+  }
+  
+  return -1; 
+}
+
+
+let myStr = "dyush";
+let result = findIdxFirstVow(myStr);
+console.log(result); 
+
+
+
+function uniqueVal (arr) {
+    return [...new Set(arr)]; 
+  
+}
+let brr =[1,2,5,2,3,1,8];
+console.log(uniqueVal(brr));
+
+
+
+let array = [1, 2, 3];
+let array2 = [4, 5, 6];
+let array3 = [...array, ...array2];  // using spread opre.
+
+console.log(array3); 
+
+*/
+
+const count = (s) => s.trim().split(/\s+/).length;
+
+const s = "Hello, this is a simple test.";
+console.log(count(s));
+
+95
