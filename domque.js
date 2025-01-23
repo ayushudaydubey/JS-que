@@ -68,3 +68,24 @@ function changeh2Text() {
 
 const content = document.querySelector("#content");
 content.innerHTML = " <h2> This is h2 </h2> <p> this is p </p>";
+
+
+function clickMe() {
+  const content = document.querySelector("#content")
+  content.innerHTML = "  <button>Click Me!</button>"
+}
+
+const info = document.querySelector(".info")
+const strong = document.createElement("strong")
+strong.textContent ="Important"
+info.append(strong)
+
+const main  = document.querySelector("#main")
+main.innerHTML ='<ul> <li> Home </li> <li> About </li> <li> contect </li> </ul>'
+
+function takeImg(id) {
+   const element = document.querySelector(`#${id}`)
+   const img = document.createElement("img")
+   img.src ="https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+element.appendChild(img)
+}
